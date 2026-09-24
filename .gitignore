@@ -1,0 +1,19 @@
+# ⚠️ 本文件只放「绝不可能属于 npm 包内容」的规则。
+#
+# 原因（2026-09-20 实测，0.2.0 就是这么发出一个没有二进制的空壳包）：
+# npm 打包时若在包目录里找不到 .npmignore，会回退把 .gitignore 当忽略规则用 ——
+# 被它忽略的文件即使写在 package.json 的 files 白名单里也进不了包。
+# 本地 Windows 不复现、Linux CI 上必现，所以当年在本地怎么试都是好的。
+#
+# 包目录里的 .npmignore 是掐断这条回退路径的主力；本文件再退一步：
+# **不要在这里写任何可能命中 bin/ 或 binaries/ 的规则**（包括 *.exe）。
+#
+# 构建产物由 Gox 主仓库的 scripts/build-npm.sh 写进 binaries/，发布后由
+# release.yml 里 always() 的清理步骤删掉 —— 它本来就不该被提交，
+# 但也绝不能因为被忽略而从包里消失。
+
+.mimosa/
+__pycache__/
+*.pyc
+node_modules/
+*.tgz
