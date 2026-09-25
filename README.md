@@ -177,6 +177,13 @@ try {
 演示：`goxjs testdata/native_demo.js`。语义与导出表见
 [`docs/gui-guide.md` §9.6](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md#96-原生能力层)。
 
+## 0.6.0 更新
+
+- **GUI 全平台**：macOS 窗口后端（cocoa，purego 纯 Go 驱动 AppKit）落地 —— 桌面 GUI 现在 Windows / macOS / Linux 三平台可用，npm 预编译二进制开箱即含。
+- **开发工作流**：`gox dev [入口.js]` 热更新（监听 `src/` 的 `.js` 变更，自动重建 VM 重跑入口）；`gox.json` 项目配置；`gox build <android|ios|windows|macos>` 统一构建入口（自动完成权限注入与图标生成）；`gox icon` / `gox sync` 也可独立使用。
+- **语言**：async 箭头函数（`async () => {}`，`this` 保持词法）；`for (const [a, b] of pairs)` 解构绑定；实参/形参列表尾逗号。
+- **修复**：循环导入栈溢出、JSX 缺省工厂在模块模式漏补、嵌套解构解析、solid 通知每轮重复触发等。
+
 完整文档与语言示例见 [GitHub 仓库](https://github.com/14752222/Gox)。
 
 ## License
