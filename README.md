@@ -188,4 +188,4 @@ try {
 
 ## License
 
-[Apache License 2.0](https://github.com/14752222/Gox/blob/main/LICENSE)
+[MIT License](https://github.com/14752222/Gox/blob/main/LICENSE)
