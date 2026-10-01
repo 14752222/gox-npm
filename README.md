@@ -21,7 +21,7 @@ goxjs
 ```
 
 ```
-Gox REPL (ES6 subset, no var)
+Gox REPL (ES6 subset)
 Type :exit to quit, :help for help
 
 > let x = 10
@@ -226,7 +226,7 @@ goxjs
 ```
 
 ```
-Gox REPL (ES6 subset, no var)
+Gox REPL (ES6 subset)
 Type :exit to quit, :help for help
 
 > let x = 10
