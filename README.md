@@ -215,6 +215,22 @@ Demo: `goxjs testdata/media_demo.js` — **run it from the repo root**, asset pa
 process working directory. Manual: [`docs/gui-guide.md`](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md);
 scope and rationale: [`docs/media-decision.md`](https://github.com/14752222/Gox/blob/main/docs/media-decision.md).
 
+## 0.12.0 Release Notes
+
+- **Anti-aliased rasteriser**: the whole drawing pipeline now composites by **coverage**
+  (`coverage = clamp(halfWidth + 0.5 - distanceToEdge, 0, 1)`) instead of snapping to whole
+  pixels — lines, circles/arcs, rings (donut charts, gauges) and path fills (area charts,
+  polygons) no longer show staircase edges. This is the difference you actually see on
+  canvas-drawn dashboards: dark background + saturated thin strokes was the worst case.
+- **Crisp where it matters**: axis-aligned 1px lines and borders stay pixel-exact (no half-lit
+  "double line" blur), line widths are unchanged, and total ink is preserved (measured −0.82%
+  on the probe scene) — anti-aliasing only redistributes the edges.
+- **Path strokes keep sub-pixel endpoints**: `strokePath` no longer rounds vertices to integers,
+  which removes the vertex jitter on polylines.
+- **Fixes & housekeeping**: the spinner's thick-line helper now shares the same anti-aliased
+  primitive, so it is no longer the last jagged thing on screen; docs and package notes updated
+  to the "coverage anti-aliasing" wording.
+
 ## 0.11.0 Release Notes
 
 - **Media actually plays**: `<video>` / `<audio>` now ship with `gfx/softmedia`, a pure-Go software
@@ -457,6 +473,17 @@ try {
 演示：`goxjs testdata/media_demo.js` —— **必须从仓库根运行**，素材路径按进程工作目录解析。手册见
 [`docs/gui-guide.md`](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md)；边界与理由见
 [`docs/media-decision.md`](https://github.com/14752222/Gox/blob/main/docs/media-decision.md)。
+
+### 0.12.0 更新
+
+- **光栅抗锯齿**：整条绘制链路改为按**覆盖率**合成（`coverage = clamp(半宽 + 0.5 - 到边界距离, 0, 1)`），
+  不再像素级取整 —— 折线、圆弧、环带（环形图 / 仪表盘）、路径填充（面积图 / 多边形）不再有楼梯状锯齿。
+  自绘看板的典型场景（深色底 + 高饱和细线）此前正是最扎眼的一种。
+- **该锐利的地方仍然锐利**：整数端点的 1px 横竖线与边框保持像素精确（不会被糊成两条半亮的线），
+  线宽不变，墨量基本不变（探针场景实测 −0.82%）—— 抗锯齿只是把边缘重新分布。
+- **描边保留亚像素端点**：`strokePath` 不再把顶点取整，折线不再抖。
+- **修复与收尾**：spinner 的粗线改用同一套抗锯齿原语，不再是屏幕上最后一个带锯齿的东西；
+  文档与包内说明同步为「覆盖率抗锯齿」口径。
 
 ### 0.11.0 更新
 
