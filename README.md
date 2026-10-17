@@ -85,6 +85,7 @@ GUI examples (40+ runnable demos live in the repo's `testdata/` directory):
 goxjs testdata/view_demo2.js      # list reuse / conditional keep-alive / multi-branch
 goxjs testdata/model_demo.js      # two-way binding across all eight control types
 goxjs testdata/router_demo.js     # route table / param matching / three-level guards / lazy loading
+goxjs testdata/media_demo.js     # media: GIF video / MJPEG / WAV audio, really playing
 ```
 
 ## Router & Screens (`gx/router` / `gx/screen`)
@@ -182,6 +183,51 @@ try {
 
 Demo: `goxjs testdata/native_demo.js`. Semantics and export tables:
 [`docs/gui-guide.md` §9.6](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md#96-原生能力层).
+
+## Media (`<video>` / `<audio>`)
+
+**New in 0.11.0**: the two media tags finally *play* on Linux — until now the core only defined a host
+contract and every desktop backend downgraded to a poster / placeholder.
+
+```jsx
+<video src="testdata/media_demo.gif" fit="contain" loop playing width={320} height={180}
+       onTimeUpdate={(e) => setPos(e.currentTime)} />
+<audio src="testdata/media_demo.wav" playing loop volume={0.8}
+       onEnded={() => console.log("done")} />
+```
+
+- **Contract first, never a fake play**: the core only knows the `nativeVideoHost` / `nativeAudioHost`
+  interfaces. A backend without that capability draws a poster (or a placeholder bar for audio) and
+  **reports honestly** — one stderr warning, one `onError({code:"unsupported"})`, and
+  `canIUse("video" / "audio")` answering `false`. It never pretends to be playing.
+- **`gfx/softmedia` (default on Linux)** is the reference implementation of both interfaces, covering
+  exactly what the Go standard library can decode: video **GIF** (disposal 0/1/2/3 compositing) and
+  **MJPEG**; audio **WAV** (PCM 8/16/24/32-bit + IEEE float) out through PulseAudio (`purego` dlopen,
+  zero cgo). No libpulse / no server / no device ⇒ **null sink**: silent, but the playback clock and
+  every event stay real.
+- **Out of scope on purpose**: h264 / hevc / vp9 / av1 and mp3 / aac / ogg are not decoded. Those belong
+  to a platform media layer (Windows MF / macOS AVPlayerLayer / Linux GStreamer) — it just has to
+  implement the same two interfaces.
+- `playing` / `muted` / `loop` / `volume` / `fit` are **controlled** props; whatever the host reports
+  comes back as `onReady` / `onPlay` / `onPause` / `onEnded` / `onTimeUpdate({currentTime, duration})`.
+
+Demo: `goxjs testdata/media_demo.js` — **run it from the repo root**, asset paths resolve against the
+process working directory. Manual: [`docs/gui-guide.md`](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md);
+scope and rationale: [`docs/media-decision.md`](https://github.com/14752222/Gox/blob/main/docs/media-decision.md).
+
+## 0.11.0 Release Notes
+
+- **Media actually plays**: `<video>` / `<audio>` now ship with `gfx/softmedia`, a pure-Go software
+  media backend (GIF / MJPEG video, WAV + PulseAudio audio) wired into the default Linux build.
+  `<audio>` is a new tag; `<video>` gained `fit`. Everywhere else the honest-downgrade path is unchanged.
+- **`gx/datav`**: dashboard / data-visualisation component library, with a 29-script screenshot gallery.
+- **GPU presentation backend prototype** (`-tags gpu`): presentation wrappers now stack as a chain in
+  front of the software rasteriser. Experimental — the default build is untouched.
+- **Language**: `for...in` destructuring bindings, and heads without a declaration.
+- **Apps**: a foldable-screen demo app covering four scenarios.
+- **Fixes & housekeeping**: `device.vibrate` no longer declares a capability it can never honour (that
+  made `canIUse` lie); new platform-independent host-contract test suite; test262 language compliance
+  78.76% → 78.9%.
 
 ## 0.6.0 Release Notes
 
@@ -290,6 +336,7 @@ GUI 示例（仓库 `testdata/` 下有 40+ 个可直接运行的演示）：
 goxjs testdata/view_demo2.js      # 列表复用 / 条件保活 / 多分支
 goxjs testdata/model_demo.js      # 八类受控组件的双向绑定
 goxjs testdata/router_demo.js     # 路由表 / 参数匹配 / 三级守卫 / 懒加载
+goxjs testdata/media_demo.js     # 媒体：GIF 视频 / MJPEG / WAV 音频真播放
 ```
 
 ### 路由与屏幕（`gx/router` / `gx/screen`）
@@ -383,6 +430,46 @@ try {
 
 演示：`goxjs testdata/native_demo.js`。语义与导出表见
 [`docs/gui-guide.md` §9.6](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md#96-原生能力层)。
+
+### 媒体组件（`<video>` / `<audio>`）
+
+**0.11.0 起在 Linux 上真的能播** —— 此前内核只有宿主契约，桌面三后端一律降级成封面 / 占位条。
+
+```jsx
+<video src="testdata/media_demo.gif" fit="contain" loop playing width={320} height={180}
+       onTimeUpdate={(e) => setPos(e.currentTime)} />
+<audio src="testdata/media_demo.wav" playing loop volume={0.8}
+       onEnded={() => console.log("done")} />
+```
+
+- **先有契约，绝不假装在播**：内核只认 `nativeVideoHost` / `nativeAudioHost` 两个接口。后端没有这块
+  能力就画封面（音频是一条占位条）并**诚实报错** —— stderr 告警一次、派发一次 `onError({code:"unsupported"})`、
+  `canIUse("video" / "audio")` 照实回答 `false`。
+- **`gfx/softmedia`（Linux 默认挂上）**是这两个接口的参考实现，只覆盖标准库够得着的格式：视频
+  **GIF**（disposal 0/1/2/3 合成）与 **MJPEG**；音频 **WAV**（PCM 8/16/24/32 位 + IEEE float）经
+  PulseAudio 输出（`purego` dlopen，零 cgo）。没有 libpulse / 没有服务 / 没有设备 ⇒ **null sink**：
+  不放声，但播放时钟与事件全部照真。
+- **刻意的边界**：h264 / hevc / vp9 / av1 与 mp3 / aac / ogg 一概不解 —— 那些属于平台媒体层
+  （Windows MF / macOS AVPlayerLayer / Linux GStreamer），它只要实现同样两个接口即可接入。
+- `playing` / `muted` / `loop` / `volume` / `fit` 都是**受控**属性；宿主上报的状态经 `onReady` /
+  `onPlay` / `onPause` / `onEnded` / `onTimeUpdate({currentTime, duration})` 回到脚本。
+
+演示：`goxjs testdata/media_demo.js` —— **必须从仓库根运行**，素材路径按进程工作目录解析。手册见
+[`docs/gui-guide.md`](https://github.com/14752222/Gox/blob/main/docs/gui-guide.md)；边界与理由见
+[`docs/media-decision.md`](https://github.com/14752222/Gox/blob/main/docs/media-decision.md)。
+
+### 0.11.0 更新
+
+- **媒体真的能播了**：`<video>` / `<audio>` 配上 `gfx/softmedia` 软件媒体后端（GIF / MJPEG 视频，
+  WAV + PulseAudio 音频），已接进 Linux 默认构建。`<audio>` 是新标签，`<video>` 新增 `fit`；其余平台
+  的诚实降级路径不变。
+- **`gx/datav`**：大屏 / 数据可视化组件库，附带 29 个单组件画廊截图脚本。
+- **GPU 呈现后端原型**（`-tags gpu`）：呈现包装器改为**链式叠加**，可挂在软件光栅化之前。实验轨，
+  默认构建不受影响。
+- **语言**：`for...in` 解构绑定，以及无声明的 `for...in` 头部。
+- **应用**：折叠屏四场景演示应用。
+- **修复与收尾**：`device.vibrate` 撤下了"声明了却恒 unsupported"的能力声明（那让 `canIUse` 说谎）；
+  新增平台无关的宿主契约测试套件；test262 language 合规率 78.76% → 78.9%。
 
 ### 0.6.0 更新
 
