@@ -1,8 +1,8 @@
 {
   "name": "@goxjs/goxjs-mobile-ios-iphoneos-arm64",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "Gox 移动端预编译库 —— iOS 真机 arm64（libgox.a，c-archive + libgox.h）。@goxjs/goxjs 的平台子包（M11）",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/14752222/Gox.git"
