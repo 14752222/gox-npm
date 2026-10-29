@@ -1,27 +1,19 @@
 {
-  "name": "@goxjs/goxjs-mobile-ios-iphonesimulator-arm64",
-  "version": "0.0.1",
-  "description": "Gox 移动端预编译库 —— iOS 模拟器 arm64（libgox.a，c-archive + libgox.h）。@goxjs/goxjs 的平台子包（M11）",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/14752222/Gox.git"
+  "name": "package.json",
+  "path": "packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json",
+  "sha": "0345f721900197dcd76407bbe79b73dd01220d20",
+  "size": 592,
+  "url": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json?ref=main",
+  "html_url": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json",
+  "git_url": "https://api.github.com/repos/14752222/gox-npm/git/blobs/0345f721900197dcd76407bbe79b73dd01220d20",
+  "download_url": "https://raw.githubusercontent.com/14752222/gox-npm/main/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json",
+  "type": "file",
+  "content": "ewogICJuYW1lIjogIkBnb3hqcy9nb3hqcy1tb2JpbGUtaW9zLWlwaG9uZXNp\nbXVsYXRvci1hcm02NCIsCiAgInZlcnNpb24iOiAiMC4wLjEiLAogICJkZXNj\ncmlwdGlvbiI6ICJHb3gg56e75Yqo56uv6aKE57yW6K+R5bqTIOKAlOKAlCBp\nT1Mg5qih5ouf5ZmoIGFybTY077yIbGliZ294LmHvvIxjLWFyY2hpdmUgKyBs\naWJnb3guaO+8ieOAgkBnb3hqcy9nb3hqcyDnmoTlubPlj7DlrZDljIXvvIhN\nMTHvvIkiLAogICJsaWNlbnNlIjogIk1JVCIsCiAgInJlcG9zaXRvcnkiOiB7\nCiAgICAidHlwZSI6ICJnaXQiLAogICAgInVybCI6ICJnaXQraHR0cHM6Ly9n\naXRodWIuY29tLzE0NzUyMjIyL0dveC5naXQiCiAgfSwKICAiZmlsZXMiOiBb\nCiAgICAibGliZ294LmEiLAogICAgImxpYmdveC5oIiwKICAgICJtYW5pZmVz\ndC5qc29uIgogIF0sCiAgInB1Ymxpc2hDb25maWciOiB7CiAgICAiYWNjZXNz\nIjogInB1YmxpYyIKICB9LAogICJrZXl3b3JkcyI6IFsKICAgICJnb3giLAog\nICAgImphdmFzY3JpcHQiLAogICAgInJ1bnRpbWUiLAogICAgIm1vYmlsZSIs\nCiAgICAiaW9zIiwKICAgICJpcGhvbmVzaW11bGF0b3IiLAogICAgImFybTY0\nIgogIF0KfQ==\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json?ref=main",
+    "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/0345f721900197dcd76407bbe79b73dd01220d20",
+    "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json"
   },
-  "files": [
-    "libgox.a",
-    "libgox.h",
-    "manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [
-    "gox",
-    "javascript",
-    "runtime",
-    "mobile",
-    "ios",
-    "iphonesimulator",
-    "arm64"
-  ]
+  "version": "0.15.0"
 }
