@@ -15,5 +15,5 @@
     "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/02c94674e5f0697472542d771ebe538aad880620",
     "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-harmony-arm64-v8a/package.json"
   },
-  "version": "0.0.1"
+  "version": "0.15.1"
 }
