@@ -1,6 +1,6 @@
 {
   "name": "@goxjs/goxjs-mobile-harmony-arm64-v8a",
-  "version": "0.15.13",
+  "version": "0.15.14",
   "description": "Gox 移动端预编译库 —— HarmonyOS arm64-v8a（libgox.so，c-shared）。@goxjs/goxjs 的平台子包（M11）",
   "license": "MIT",
   "repository": {
