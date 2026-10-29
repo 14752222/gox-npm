@@ -15,5 +15,5 @@
     "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/92a23a6266d28b68a497badcb281a8d39cf91bf2",
     "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-android-arm64-v8a/package.json"
   },
-  "version": "0.0.1"
+  "version": "0.15.1"
 }
