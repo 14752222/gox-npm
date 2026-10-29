@@ -1,26 +1,19 @@
 {
-  "name": "@goxjs/goxjs-mobile-harmony-arm64-v8a",
-  "version": "0.0.1",
-  "description": "Gox 移动端预编译库 —— HarmonyOS arm64-v8a（libgox.so，c-shared）。@goxjs/goxjs 的平台子包（M11）",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/14752222/Gox.git"
+  "name": "package.json",
+  "path": "packages/goxjs-mobile-harmony-arm64-v8a/package.json",
+  "sha": "02c94674e5f0697472542d771ebe538aad880620",
+  "size": 560,
+  "url": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-harmony-arm64-v8a/package.json?ref=main",
+  "html_url": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-harmony-arm64-v8a/package.json",
+  "git_url": "https://api.github.com/repos/14752222/gox-npm/git/blobs/02c94674e5f0697472542d771ebe538aad880620",
+  "download_url": "https://raw.githubusercontent.com/14752222/gox-npm/main/packages/goxjs-mobile-harmony-arm64-v8a/package.json",
+  "type": "file",
+  "content": "ewogICJuYW1lIjogIkBnb3hqcy9nb3hqcy1tb2JpbGUtaGFybW9ueS1hcm02\nNC12OGEiLAogICJ2ZXJzaW9uIjogIjAuMC4xIiwKICAiZGVzY3JpcHRpb24i\nOiAiR294IOenu+WKqOerr+mihOe8luivkeW6kyDigJTigJQgSGFybW9ueU9T\nIGFybTY0LXY4Ye+8iGxpYmdveC5zb++8jGMtc2hhcmVk77yJ44CCQGdveGpz\nL2dveGpzIOeahOW5s+WPsOWtkOWMhe+8iE0xMe+8iSIsCiAgImxpY2Vuc2Ui\nOiAiTUlUIiwKICAicmVwb3NpdG9yeSI6IHsKICAgICJ0eXBlIjogImdpdCIs\nCiAgICAidXJsIjogImdpdCtodHRwczovL2dpdGh1Yi5jb20vMTQ3NTIyMjIv\nR294LmdpdCIKICB9LAogICJmaWxlcyI6IFsKICAgICJsaWJnb3guc28iLAog\nICAgIm1hbmlmZXN0Lmpzb24iCiAgXSwKICAicHVibGlzaENvbmZpZyI6IHsK\nICAgICJhY2Nlc3MiOiAicHVibGljIgogIH0sCiAgImtleXdvcmRzIjogWwog\nICAgImdveCIsCiAgICAiamF2YXNjcmlwdCIsCiAgICAicnVudGltZSIsCiAg\nICAibW9iaWxlIiwKICAgICJoYXJtb255IiwKICAgICJoYXJtb255b3MiLAog\nICAgImFybTY0LXY4YSIKICBdCn0=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-harmony-arm64-v8a/package.json?ref=main",
+    "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/02c94674e5f0697472542d771ebe538aad880620",
+    "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-harmony-arm64-v8a/package.json"
   },
-  "files": [
-    "libgox.so",
-    "manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [
-    "gox",
-    "javascript",
-    "runtime",
-    "mobile",
-    "harmony",
-    "harmonyos",
-    "arm64-v8a"
-  ]
+  "version": "0.15.0"
 }
