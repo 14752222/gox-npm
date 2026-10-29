@@ -15,5 +15,5 @@
     "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/0345f721900197dcd76407bbe79b73dd01220d20",
     "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-ios-iphonesimulator-arm64/package.json"
   },
-  "version": "0.15.0"
+  "version": "0.0.1"
 }
