@@ -1,27 +1,19 @@
 {
-  "name": "@goxjs/goxjs-mobile-ios-iphoneos-arm64",
-  "version": "0.0.1",
-  "description": "Gox 移动端预编译库 —— iOS 真机 arm64（libgox.a，c-archive + libgox.h）。@goxjs/goxjs 的平台子包（M11）",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/14752222/Gox.git"
+  "name": "package.json",
+  "path": "packages/goxjs-mobile-ios-iphoneos-arm64/package.json",
+  "sha": "13c73f0c65fd8e7969e06efaac83b9bddf5f013a",
+  "size": 575,
+  "url": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-ios-iphoneos-arm64/package.json?ref=main",
+  "html_url": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-ios-iphoneos-arm64/package.json",
+  "git_url": "https://api.github.com/repos/14752222/gox-npm/git/blobs/13c73f0c65fd8e7969e06efaac83b9bddf5f013a",
+  "download_url": "https://raw.githubusercontent.com/14752222/gox-npm/main/packages/goxjs-mobile-ios-iphoneos-arm64/package.json",
+  "type": "file",
+  "content": "ewogICJuYW1lIjogIkBnb3hqcy9nb3hqcy1tb2JpbGUtaW9zLWlwaG9uZW9z\nLWFybTY0IiwKICAidmVyc2lvbiI6ICIwLjAuMSIsCiAgImRlc2NyaXB0aW9u\nIjogIkdveCDnp7vliqjnq6/pooTnvJbor5HlupMg4oCU4oCUIGlPUyDnnJ/m\nnLogYXJtNjTvvIhsaWJnb3guYe+8jGMtYXJjaGl2ZSArIGxpYmdveC5o77yJ\n44CCQGdveGpzL2dveGpzIOeahOW5s+WPsOWtkOWMhe+8iE0xMe+8iSIsCiAg\nImxpY2Vuc2UiOiAiTUlUIiwKICAicmVwb3NpdG9yeSI6IHsKICAgICJ0eXBl\nIjogImdpdCIsCiAgICAidXJsIjogImdpdCtodHRwczovL2dpdGh1Yi5jb20v\nMTQ3NTIyMjIvR294LmdpdCIKICB9LAogICJmaWxlcyI6IFsKICAgICJsaWJn\nb3guYSIsCiAgICAibGliZ294LmgiLAogICAgIm1hbmlmZXN0Lmpzb24iCiAg\nXSwKICAicHVibGlzaENvbmZpZyI6IHsKICAgICJhY2Nlc3MiOiAicHVibGlj\nIgogIH0sCiAgImtleXdvcmRzIjogWwogICAgImdveCIsCiAgICAiamF2YXNj\ncmlwdCIsCiAgICAicnVudGltZSIsCiAgICAibW9iaWxlIiwKICAgICJpb3Mi\nLAogICAgImlwaG9uZW9zIiwKICAgICJhcm02NCIKICBdCn0=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-ios-iphoneos-arm64/package.json?ref=main",
+    "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/13c73f0c65fd8e7969e06efaac83b9bddf5f013a",
+    "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-ios-iphoneos-arm64/package.json"
   },
-  "files": [
-    "libgox.a",
-    "libgox.h",
-    "manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [
-    "gox",
-    "javascript",
-    "runtime",
-    "mobile",
-    "ios",
-    "iphoneos",
-    "arm64"
-  ]
+  "version": "0.15.0"
 }
