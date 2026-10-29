@@ -1,25 +1,19 @@
 {
-  "name": "@goxjs/goxjs-mobile-android-arm64-v8a",
-  "version": "0.0.1",
-  "description": "Gox 移动端预编译库 —— Android arm64-v8a（libgox.so，c-shared）。@goxjs/goxjs 的平台子包（M11）",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/14752222/Gox.git"
+  "name": "package.json",
+  "path": "packages/goxjs-mobile-android-arm64-v8a/package.json",
+  "sha": "92a23a6266d28b68a497badcb281a8d39cf91bf2",
+  "size": 541,
+  "url": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-android-arm64-v8a/package.json?ref=main",
+  "html_url": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-android-arm64-v8a/package.json",
+  "git_url": "https://api.github.com/repos/14752222/gox-npm/git/blobs/92a23a6266d28b68a497badcb281a8d39cf91bf2",
+  "download_url": "https://raw.githubusercontent.com/14752222/gox-npm/main/packages/goxjs-mobile-android-arm64-v8a/package.json",
+  "type": "file",
+  "content": "ewogICJuYW1lIjogIkBnb3hqcy9nb3hqcy1tb2JpbGUtYW5kcm9pZC1hcm02\nNC12OGEiLAogICJ2ZXJzaW9uIjogIjAuMC4xIiwKICAiZGVzY3JpcHRpb24i\nOiAiR294IOenu+WKqOerr+mihOe8luivkeW6kyDigJTigJQgQW5kcm9pZCBh\ncm02NC12OGHvvIhsaWJnb3guc2/vvIxjLXNoYXJlZO+8ieOAgkBnb3hqcy9n\nb3hqcyDnmoTlubPlj7DlrZDljIXvvIhNMTHvvIkiLAogICJsaWNlbnNlIjog\nIk1JVCIsCiAgInJlcG9zaXRvcnkiOiB7CiAgICAidHlwZSI6ICJnaXQiLAog\nICAgInVybCI6ICJnaXQraHR0cHM6Ly9naXRodWIuY29tLzE0NzUyMjIyL0dv\neC5naXQiCiAgfSwKICAiZmlsZXMiOiBbCiAgICAibGliZ294LnNvIiwKICAg\nICJtYW5pZmVzdC5qc29uIgogIF0sCiAgInB1Ymxpc2hDb25maWciOiB7CiAg\nICAiYWNjZXNzIjogInB1YmxpYyIKICB9LAogICJrZXl3b3JkcyI6IFsKICAg\nICJnb3giLAogICAgImphdmFzY3JpcHQiLAogICAgInJ1bnRpbWUiLAogICAg\nIm1vYmlsZSIsCiAgICAiYW5kcm9pZCIsCiAgICAiYXJtNjQtdjhhIgogIF0K\nfQ==\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/14752222/gox-npm/contents/packages/goxjs-mobile-android-arm64-v8a/package.json?ref=main",
+    "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/92a23a6266d28b68a497badcb281a8d39cf91bf2",
+    "html": "https://github.com/14752222/gox-npm/blob/main/packages/goxjs-mobile-android-arm64-v8a/package.json"
   },
-  "files": [
-    "libgox.so",
-    "manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [
-    "gox",
-    "javascript",
-    "runtime",
-    "mobile",
-    "android",
-    "arm64-v8a"
-  ]
+  "version": "0.15.0"
 }
