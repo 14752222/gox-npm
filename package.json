@@ -1,19 +1,33 @@
 {
-  "name": "package.json",
-  "path": "package.json",
-  "sha": "bc7068552587fec7e919c7d114a07407e07aab13",
-  "size": 636,
-  "url": "https://api.github.com/repos/14752222/gox-npm/contents/package.json?ref=main",
-  "html_url": "https://github.com/14752222/gox-npm/blob/main/package.json",
-  "git_url": "https://api.github.com/repos/14752222/gox-npm/git/blobs/bc7068552587fec7e919c7d114a07407e07aab13",
-  "download_url": "https://raw.githubusercontent.com/14752222/gox-npm/main/package.json",
-  "type": "file",
-  "content": "ewogICJuYW1lIjogIkBnb3hqcy9nb3hqcyIsCiAgInZlcnNpb24iOiAiMC4w\nLjEiLAogICJkZXNjcmlwdGlvbiI6ICJHb3gg4oCUIOeUqCBHbyDku47pm7bl\nrp7njrDnmoQgSmF2YVNjcmlwdCDov5DooYzml7bvvIhsZXhlciDihpIgcGFy\nc2VyIOKGkiDlrZfoioLnoIEgVk3vvInvvIzljZXkuozov5vliLbpm7blpJbp\ng6jkvp3otZYiLAogICJsaWNlbnNlIjogIk1JVCIsCiAgInJlcG9zaXRvcnki\nOiB7CiAgICAidHlwZSI6ICJnaXQiLAogICAgInVybCI6ICJnaXQraHR0cHM6\nLy9naXRodWIuY29tLzE0NzUyMjIyL0dveC5naXQiCiAgfSwKICAiYmluIjog\newogICAgImdveGpzIjogImJpbi9nb3guanMiLAogICAgImdveCI6ICJiaW4v\nZ294LmpzIgogIH0sCiAgImZpbGVzIjogWwogICAgImJpbi9nb3guanMiLAog\nICAgImJpbmFyaWVzLyIKICBdLAogICJlbmdpbmVzIjogewogICAgIm5vZGUi\nOiAiPj0xNCIKICB9LAogICJwdWJsaXNoQ29uZmlnIjogewogICAgImFjY2Vz\ncyI6ICJwdWJsaWMiCiAgfSwKICAia2V5d29yZHMiOiBbCiAgICAiamF2YXNj\ncmlwdCIsCiAgICAicnVudGltZSIsCiAgICAiaW50ZXJwcmV0ZXIiLAogICAg\nImJ5dGVjb2RlLXZtIiwKICAgICJnbyIsCiAgICAiZ3VpIiwKICAgICJqc3gi\nCiAgXQp9\n",
-  "encoding": "base64",
-  "_links": {
-    "self": "https://api.github.com/repos/14752222/gox-npm/contents/package.json?ref=main",
-    "git": "https://api.github.com/repos/14752222/gox-npm/git/blobs/bc7068552587fec7e919c7d114a07407e07aab13",
-    "html": "https://github.com/14752222/gox-npm/blob/main/package.json"
+  "name": "@goxjs/goxjs",
+  "version": "0.15.1",
+  "description": "Gox — 用 Go 从零实现的 JavaScript 运行时（lexer → parser → 字节码 VM），单二进制零外部依赖",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/14752222/Gox.git"
   },
-  "version": "0.15.1"
+  "bin": {
+    "goxjs": "bin/gox.js",
+    "gox": "bin/gox.js"
+  },
+  "files": [
+    "bin/gox.js",
+    "binaries/"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "javascript",
+    "runtime",
+    "interpreter",
+    "bytecode-vm",
+    "go",
+    "gui",
+    "jsx"
+  ]
 }
