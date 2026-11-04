@@ -86,6 +86,7 @@ goxjs testdata/view_demo2.js      # list reuse / conditional keep-alive / multi-
 goxjs testdata/model_demo.js      # two-way binding across all eight control types
 goxjs testdata/router_demo.js     # route table / param matching / three-level guards / lazy loading
 goxjs testdata/media_demo.js     # media: GIF video / MJPEG / WAV audio, really playing
+GOX_DEV=1 goxjs apps/devtools/src/main.js   # interactive GUI inspector (element tree / props / console / REPL / perf)
 ```
 
 ## Router & Screens (`gx/router` / `gx/screen`)
