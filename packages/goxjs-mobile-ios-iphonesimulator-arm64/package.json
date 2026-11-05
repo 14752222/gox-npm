@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/14752222/Gox.git"
+    "url": "git+https://github.com/gox147/Gox.git"
   },
   "files": [
     "libgox.a",
